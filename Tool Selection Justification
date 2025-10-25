@@ -1,1 +1,27 @@
+Apache JMeter was selected as the testing tool in this assignment due to the several reasons such as:
 
+1. Free Open-Source Project 
+   - Apache JMeter does not require license to work, and there are no hidden charge too. Apache Jmeter also 
+     offer community support, which means even though Apache JMeter developed by Apache Foundation, it also opened 
+     to community to support and enhance this tool feature, using collaborative method with other developer.
+     This tool also offer transparency, which means the user can modify the code based on their intentions.
+
+2. Support Various Protocol 
+   - Apache JMeter offer services to do website testing for websites that use either http or https. This tool 
+     also support JDBC, FTP, SOAP, and even can perform API Testing, like RESTful services.
+
+3. Equipped with Enterprise-Grade Features 
+   - Apache JMeter equipped with various features like comprehensive HTML alongside with graphs
+     and charts. This tool can also perform CSV data-driven testing capabilities, and even
+     distributed testing across multiple load injectors for better results.
+
+4. Ease of Use 
+   - Apache JMeter offer both options, Graphical User Interface (GUI) and Command-Line Interface (CLI). A beginner 
+     user can choose the Graphical User Interface (GUI) since it is very easy to use and the options are intuitive 
+     to find. The user that is already familiar with this tool can used Command-Line Interface (CLI), which reduce 
+     the resource consumption for this tool, especially when running heavy or long testing.
+
+5. Better Features 
+   - Compared to other similar tools like Grafana k6 or Gatling, this tool offers a more detailed comprehensive report
+     including graphs and charts, and the setup for specific test is user-friendly for the beginner. Furthermore, this 
+     tool ensures broad accessibility through cross-platform compatibility, such as Windows, MacOS, and even Linux.
