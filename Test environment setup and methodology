@@ -1,1 +1,72 @@
+TESTED APPLICATION
 
+* https://httpbin.org/
+- This website is a simple REST API Testing Service website that have features of supporting HTTP request and response for the purpose of testing. 
+  This website also been developed to be publicly accessible, and designed for testing, that is why this website equipped with various features like:
+  1. Support various HTTP method such as, GET, POST, PUT, AND DELETE
+  2. Response format like JSON, HTML and images
+  3. Status code, like 200 OK or 404 Not Found
+  4. Basic authentication, which enables user to simulate client behaviour with authentication request
+  5. Dynamic data, which means this website can generate random JSON file, and even images with various sizes 
+
+Testing Infrastructure
+* This test was done using this specification:
+  1. Testing Tool - Apache JMeter 5.6.3 
+  2. Java Environment - OpenJDK 25 
+  3. Operating System - Windows 11 
+  4. System Memory - 32GB RAM 
+  5. Processor - AMD Ryzen 5 5600H
+  6. Network Connection - 131 Mbps Mobile Hotspot, which may produce additional latency
+
+Test Configuration
+* Breakpoint Test Design
+  1. Objective: Identify system capacity limits and performance degradation when many users access the website simultaneously
+  2. Threads: 50 virtual users
+  3. Ramp-up Period: 300 seconds 
+  4. Test Duration: 360 seconds
+  5. Loop Count: Infinite 
+
+HTTP Request Configuration
+  1. Protocol: HTTPS
+  2. Server Name: httpbin.org
+  3. Server URL: https://httpbin.org/
+  4. API Endpoint: /delay/2, which means simulating 2-second server processing time
+  5. HTTP Method: GET
+  6. Port: 443
+
+User Behavior Simulation
+  1. Think Time: Gaussian Random Timer 
+     - Purpose: To simulate realistic user browsing patterns in average website
+
+
+MONITORING AND DATA COLLECTION
+
+Performance Metrics Captured
+  1. Response Times 
+     - This breakpoint test simulate minimum, maximum, and average response time of the website.
+  2. Throughput 
+     - This breakpoint test calculate the website's throughput when 50 users accessing the website 
+       simultaneously by analyzing the requests per second.
+  3. Error Rates 
+     - This breakpoint test simulate the HTTP Status Codes like 200 OK, 404 Not Found and 500 Internal
+       Server Error
+  4. Standard Deviation 
+     - This breakpoint test calculate the website's standard deviation when 50 users accessing the 
+       website simultaneously by analyzing the response time variability.
+
+
+JMeter Listeners Utilized
+   1. Response Time Graph
+      - This type of listener show response time in graph format, which is how the server response when 
+        the load increase, especially when large number of users access the website simultaneously.
+        In real life, this features is very useful to identify performance degradation or spikes in 
+        response time under certain conditions.
+   2. Summary Report
+      - Provide a detailed comprehensive report in a table format that contains information like samples, 
+        average, minimum/maximum, standard deviation, error and throughput. This feature is useful for
+        post test assessment since it evaluates the overall website performance.
+   3. Graph Result
+      - Provide performance metrics during the test execution in a simple graph format, that contains 
+        information such as average response time (Blue line), throughput (Yellow line), standard 
+        deviation (Red line), and median response time (Green line). This feature is very useful since it 
+        represents a visual indication about how performance changes over time.
