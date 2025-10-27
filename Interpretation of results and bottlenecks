@@ -1,1 +1,36 @@
+Results Interpretation
+
+From this breakpoint test on website httpbin.org, it shows this website handles the response time very well. This was shown from the result 
+that this website has 500-1000 milliseconds response range. These results are clearly visualized in the response time graph in the figure 1
+above, which indicates that this website has stable system performance that can handle multiple groups of users simultaneously.
+
+This website also has an efficient data handling or throughput, which shown from the result that the throughput is 11.96 KB/sec that 
+indicates that this website has reliability in data processing. The consistency of transfer rates could also balance the network utilization 
+and the uniform response size, which is 2349 bytes show predictable resource usage, which is very stable.
+
+This website also has high-volume processing capability, that was proved by the results that this website successfully processed 18793 
+requests without a single failure. Furthermore, from the results, we could see the error rate is 0%, which indicates this website
+can handle massive volume of traffic very well. From the 6 minutes of testing, it is shown that this website has the consistency
+to maintain its performance.
+
+Bottlenecks
+
+Based on the tested website, it is shown several bottlenecks of the system. The first one is this website has high average response time.
+Even though this website have consistent performance of maintaining stable 500-1000 milliseconds range, the average of response time is
+5580 milliseconds, which is still high for the users. This issue can impact the users by causing noticeable delays in page loading.
+The root cause of this issue is the test's configuration that intentionally add 2-second latency using command '/delay/2' before
+execute the test. That command was assigned due to the reasons that most websites nowadays don't respond instantly for the user requests,
+which means they need to process data first, query the database, and so on. So the command '/delay/2' are used to simulate realistic 
+backend processing time of 2 seconds, which is more realistic in real life scenario.
+
+The second bottlenecks is this website don't have exact system capacity limits. The test that was made was simulated 50 users accessing 
+the website simultaneously, but the website handles it very well, so we cannot determine the exact breakpoint limit of this website.
+The root cause for this issue is so simple, which is the test resource is not sufficient to test the real limits of this website.
+
+The final bottlenecks is single endpoint testing. As clearly stated above, we only used command '/delay/2' that simulates every user faced 2 
+seconds of backend processing time. However, in real life, the results of how long the backend processing time are not always same for each user, 
+some might face less than 2 seconds, some might face instantly, and some might face maybe more than 5 seconds. This issue was due to the 
+limited understanding of overall website performance, which is how this website will handle the requests in real world application. The 
+root cause for this issue is due to the narrow scope of testing, which is just to test the 2 seconds backend processing time for each user.
+
 
