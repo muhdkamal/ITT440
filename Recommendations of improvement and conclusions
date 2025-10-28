@@ -1,1 +1,19 @@
+Recommendations for Improvement
 
+1. Enhanced the testing methodology
+   - The previous breakpoint test only simulates '/delay/2', which means the test simulate 2 second of backend processing time. For
+     the next test, delays should be varied, like some users experience 2 seconds of delay, some might face 3 seconds, and some might 
+     face 5 seconds. Furthermore, the number of users should be increased maybe to hundreds or thousands of users to test the actual
+     breakpoint limit.
+
+2. Improve resource monitoring
+   - For the next test, certain plugin, like JMeter PerfMon should be considered to be added into the test in order to capture the
+     CPU, memory and disk resource allocation. Furthermore, the reporting section of the test could be enhanced more in the future,
+     like generate comprehensive HTML reports with percentile analysis, such as 90 and 95th percentiles.
+
+3. Network Optimization
+   - For the next test, the wired connection should be considered to be used. As we know, the previous test used the internet connections 
+     from the mobile hotspot, which might introduce some additional latency that could affect the test results. With wired connection, 
+     the internet connection will be more stable, which can make the test's results to be more efficient. Furthermore, caching
+     strategies are also part of improvement that could be done in the next test, which works by implementing caching mechanism for 
+     frequent accessed points.
