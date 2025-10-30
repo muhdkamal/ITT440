@@ -1,27 +1,29 @@
-Apache JMeter was selected as the testing tool in this assignment due to the several reasons such as:
+Tool Selection Justification: Siege
 
-1. Free Open-Source Project 
-   - Apache JMeter does not require license to work, and there are no hidden charge too. Apache Jmeter also 
-     offer community support, which means even though Apache JMeter developed by Apache Foundation, it also opened 
-     to community to support and enhance this tool feature, using collaborative method with other developer.
-     This tool also offer transparency, which means the user can modify the code based on their intentions.
+Siege was selected as the testing tool for this performance analysis due to several reasons:
 
-2. Support Various Protocol 
-   - Apache JMeter offer services to do website testing for websites that use either http or https. This tool 
-     also support JDBC, FTP, SOAP, and even can perform API Testing, like RESTful services.
+1. Open-Source Tool
 
-3. Equipped with Enterprise-Grade Features 
-   - Apache JMeter equipped with various features like comprehensive HTML alongside with graphs
-     and charts. This tool can also perform CSV data-driven testing capabilities, and even
-     distributed testing across multiple load injectors for better results.
+Siege is an open-source tool, which is completely free to use without any fees.Siege also allows users 
+to modify the code and customize it according to their specific needs. This tool also provide transparency 
+and continuous improvement through contributions from developers around the world.
 
-4. Ease of Use 
-   - Apache JMeter offer both options, Graphical User Interface (GUI) and Command-Line Interface (CLI). A beginner 
-     user can choose the Graphical User Interface (GUI) since it is very easy to use and the options are intuitive 
-     to find. The user that is already familiar with this tool can used Command-Line Interface (CLI), which reduce 
-     the resource consumption for this tool, especially when running heavy or long testing.
+2. Support for HTTP and HTTPS Testing
 
-5. Better Features 
-   - Compared to other similar tools like Grafana k6 or Gatling, this tool offers a more detailed comprehensive report
-     including graphs and charts, and the setup for specific test is user-friendly for the beginner. Furthermore, this 
-     tool ensures broad accessibility through cross-platform compatibility, such as Windows, MacOS, and even Linux.
+Siege is primarily designed for testing HTTP and HTTPS-based web servers, which makes it very suitable 
+for testing the performance of web applications and services. This allows it to simulate multiple users 
+making requests to the web server, which is very suitable for several test like stress test, load test,
+and spike test.
+
+3. Lightweight and Efficient
+
+Siege is a lightweight tool that does not require significant system resources to operate due to the use of 
+command line (CLI) instead of Graphical User Interface (GUI). It is ideal for quick tests with minimum resource, 
+and it can easily handle scenarios with a high number of concurrent users. Siege offers essential features such 
+as customizable delays between requests to simulate realistic user behavior.
+
+4. Ease of Use
+
+Siege is known for its beginner-friendly concept and ease of use. The command-line interface (CLI) allows users to perform
+specific tests by providing several basic parameters, such as the number of concurrent users, test duration, and 
+the target URL. Additionally, the tool provides clear output, making it easy to analyze results.
