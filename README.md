@@ -107,4 +107,39 @@ Figure 2: Key Performance Metrics Overview
 GRAPH3 IMAGE
 Figure 3: Transaction Time Comparison
 
+INTERPRETATION OF RESULTS 
 
+The performance test on the website https://tools-httpstatus.pickup-services.com/ shows that the site can handle response 
+times well when there is a moderate load. The average response time of 2.69 seconds, as shown in the performance figure 1 graph.
+This suggests that the server can manage multiple requests within a reasonable timeframe. Although the longest transaction recorded was 
+19.18 seconds, this is still within an acceptable range for a public service that is under load, especially when dealing with 50 concurrent
+users access the same website simultaneously. This indicates stable system performance for handling multiple user groups simultaneously.
+
+The website is good at handling data, with a throughput rate of 0.21 MB/sec, as shown in Figure 2 graph. The transaction rate of 64.88
+transactions per second shows that the server can manage multiple requests per second without serious problem, by maintaining the network 
+utilization and server load. The total data transferred during the test was 12.35 MB, which shows that the website is efficiently handling 
+resource usage while maintaining stable data transfer capabilities.
+
+The website can also process a lot of transactions at once. It successfully processed 3909 transactions with a 98.99% availability rate,
+even though 40 of them failed. This failure rate may be attributed to network timeouts or transient issues like rate limiting, which are 
+common in publicly accessible testing endpoints. However, the overall result of 3909 successful transactions in just 60 seconds shows that
+the server is capable of managing a massive volume of traffic without any serious problems.
+
+BOTTLENECKS
+
+The performance test on the website https://tools-httpstatus.pickup-services.com/ found a number of problems with the system's performance. 
+The first bottleneck is the high average response time. Despite the website handling requests with consistent performance, the average response 
+time recorded during the test was 2.69 seconds, which is a little bit high for users. Even though response times ranged from 0.77 seconds to 19.18 
+seconds, the average response time of 2.69 seconds could cause noticeable delays for users especially in page loading, which is affecting user 
+experience. The high response time could be attributed to factors such as network latency, server load, or traffic congestion.
+
+The second bottleneck identified is the lack unknown system capacity limits. The test simulated 50 concurrent users, and the website handled these 
+requests efficiently, with the success rate of 98.99%. However, because the website performed well under this load, we cannot determine its true capacity
+limits. The cause of this limitation is the test configuration, which was not aggressive enough to push the system to its highest performance. 
+In order to determine the exact breakpoint, higher user loads would be required in the future test.
+
+The final bottleneck is only single-endpoint were used in this test. During the test, only a single endpoint, which is /GET, that was tested. In real-world 
+scenarios, there will be several other endpoints like /POST, /PUT, AND /DELETE, which can add backend processing time. The backend processing times can vary 
+across different request, and a variety of endpoints are often involved in serving different kinds of data. In our case, testing only one endpoint, which is
+/GET, with a fixed load does not fully test the website's performance, especially on how the system will perform when handling more diverse traffic patterns. 
+In practice, some requests might experience shorter response times, while others might take longer, especially under higher traffic loads or more complex process.
