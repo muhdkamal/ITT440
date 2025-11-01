@@ -143,3 +143,33 @@ scenarios, there will be several other endpoints like /POST, /PUT, AND /DELETE, 
 across different request, and a variety of endpoints are often involved in serving different kinds of data. In our case, testing only one endpoint, which is
 /GET, with a fixed load does not fully test the website's performance, especially on how the system will perform when handling more diverse traffic patterns. 
 In practice, some requests might experience shorter response times, while others might take longer, especially under higher traffic loads or more complex process.
+
+RECOMMENDATIONS OF IMPROVEMENT
+
+While the website https://tools-httpstatus.pickup-services.com/ performed well under moderate load, some areas could be improved to enhance performance, especially 
+for handling high traffic volumes.
+
+1. Optimize Response Time
+
+The average response time of 2.69 seconds is high, which can produce noticable delays for end-users. To overcome this problem, the website needs to implement caching 
+mechanisms to reduce the need for repeated data processing, which can lowering response times.This website can also use Content Delivery Network (CDN) to offload traffic 
+and reduce the physical distance between the server and users, which can speeding up response times.
+
+2. Increase System Capacity Limits
+
+While this website can handled 50 concurrent users well, the test did not achive the system's maximum capacity limits. For the future test, the performance test's 
+configuration can be considered to be changed in order to conduct more extensive load testing with a higher number of concurrent users to identify the actual maximum 
+limit of the website's server.
+
+3. Reduce Failure Rate 
+
+The website's performance test resulted in a failure rate of 1.01%, which is 40 failed transactions out of 3949 requests sent. To prevent this, the engineers needs to 
+review server-side error handling to ensure that failed transactions are minimized and to ensure that rate-limiting mechanisms do not unnecessarily block valid traffic.
+Load balancing also can be considered to be implemented to distribute user traffic across multiple servers, reducing the chance of server overloads and transaction failures.
+
+Conclusion
+
+In conclusion, the website https://tools-httpstatus.pickup-services.com/ showed stable performance under moderate load, managing 50 concurrent users with 2.69 seconds average 
+response time. The website’s throughput of 0.21 MB/sec and the transaction rate of 64.88 transactions/sec indicates that the website can efficiently handle multiple requests
+at one time without significant delays. However, some areas needs to be improved on this website to enhance the performance, such as optimize response time, and reduce failure 
+rate. By solving these problems, the website can enhance its availability to provide a better user experience during high-traffic, especially in real-world scenarios.
